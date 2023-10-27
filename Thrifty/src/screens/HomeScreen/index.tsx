@@ -1,8 +1,9 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={styles.page}>
       {/* Render Product Component */}
       <View style={styles.root}>
         <Image
@@ -11,13 +12,22 @@ const HomeScreen = () => {
             uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/products/cleanarchitecture.jpg',
           }}
         />
-        <View>
+        <View style={styles.rightContainer}>
           <Text style={styles.title}>
-            "Logitech MX Master 3 Advanced Wireless Mouse for Mac -
-            Bluetooth/USB"
+            Woman's T-Shirt Brown Medium - Zara
           </Text>
           {/* Ratings */}
-          <Text style={styles.price}>from $13.57</Text>
+          <View style={styles.ratingsContainer}>
+          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
+          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
+          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
+          <FontAwesome style={styles.star} name="star-half-full" size={18} color={'#e47911'} />
+          <FontAwesome style={styles.star} name="star-o" size={18} color={'#e47911'} />
+          <Text>Quality Rating</Text>
+            </View> 
+          <Text style={styles.price} numberOfLines={3}>
+            from $4.57
+          </Text>
         </View>
       </View>
     </View>
@@ -25,22 +35,40 @@ const HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  page: {
+    padding: 10,
+  },
   root: {
     flexDirection: 'row',
-    margin: 10,
     borderWidth: 1,
-    borderColor: 'd1d1d1',
-    borderRadius: 5,
+    borderColor: '#d1d1d1',
+    borderRadius: 10,
+    backgroundColor: '#fff',
   },
   image: {
-    width: 150,
+    flex: 2,
     height: 150,
+    resizeMode: 'contain',
+  },
+  rightContainer: {
+    padding: 10,
+    flex: 3,
   },
   title: {
-
+    fontSize: 18,
   },
   price: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  ratingsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
 
+  },
+  star: {
+    margin: 2,
   },
 });
 
