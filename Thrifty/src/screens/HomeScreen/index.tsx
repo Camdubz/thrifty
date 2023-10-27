@@ -26,7 +26,11 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   root: {
-
+    flexDirection: 'row',
+    margin: 10,
+    borderWidth: 1,
+    borderColor: 'd1d1d1',
+    borderRadius: 5,
   },
   image: {
     width: 150,
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
 
   },
   price: {
-    
+
   },
 });
 
