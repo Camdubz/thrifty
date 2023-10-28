@@ -13,21 +13,45 @@ const HomeScreen = () => {
           }}
         />
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>
-            Woman's T-Shirt Brown Medium - Zara
-          </Text>
+          <Text style={styles.title}>Woman's T-Shirt Brown Medium - Zara</Text>
           {/* Ratings */}
           <View style={styles.ratingsContainer}>
-          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
-          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
-          <FontAwesome style={styles.star} name="star" size={18} color={'#e47911'} />
-          <FontAwesome style={styles.star} name="star-half-full" size={18} color={'#e47911'} />
-          <FontAwesome style={styles.star} name="star-o" size={18} color={'#e47911'} />
-          <Text>Quality Rating</Text>
-            </View> 
+            <FontAwesome
+              style={styles.star}
+              name="star"
+              size={18}
+              color={'#e47911'}
+            />
+            <FontAwesome
+              style={styles.star}
+              name="star"
+              size={18}
+              color={'#e47911'}
+            />
+            <FontAwesome
+              style={styles.star}
+              name="star"
+              size={18}
+              color={'#e47911'}
+            />
+            <FontAwesome
+              style={styles.star}
+              name="star-half-full"
+              size={18}
+              color={'#e47911'}
+            />
+            <FontAwesome
+              style={styles.star}
+              name="star-o"
+              size={18}
+              color={'#e47911'}
+            />
+            <Text>Quality Rating</Text>
+          </View>
           <Text style={styles.price} numberOfLines={3}>
             from $4.57
           </Text>
+          <Text style={styles.oldPrice}> was $6.25</Text>
         </View>
       </View>
     </View>
@@ -61,11 +85,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  oldPrice:{
+    fontSize: 12,
+    fontWeight: 'normal',
+    textDecorationLine: 'line-through',
+  },
   ratingsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 10,
-
+    marginVertical: 5,
   },
   star: {
     margin: 2,
